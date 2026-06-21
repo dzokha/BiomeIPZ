@@ -47,8 +47,12 @@ EMU yêu cầu một bộ cơ sở dữ liệu (Database) tham chiếu có cấu
 
 Do NCBI chặn các truy vấn online số lượng lớn, quy trình được thực hiện hoàn toàn ngoại tuyến thông qua script `build_emu_raw.py` bằng cơ chế đọc luồng nén (Stream decompression) để tiết kiệm tài nguyên RAM.
 
-#### Bước 3.1: Đúc nguyên liệu bằng Script Python (`build_emu_raw.py`)
-Đặt file `sequence.fasta` và `RefSeq-release235.catalog.gz` vào cùng thư mục với script, sau đó khởi chạy:
+#### Bước 3.1: Tạo file dữ liệu sạch bằng Script Python (`build_emu_raw.py`)
+
+1. **Chuẩn bị thư mục:** Bạn tạo một thư mục mới tên là `db` nằm ngay bên trong thư mục chứa file script `build_emu_raw.py`.
+2. **Đặt file vào vị trí:** Di chuyển (hoặc copy) cả 2 file nguyên liệu là `sequence.fasta` và `RefSeq-release235.catalog.gz` bỏ vào bên trong thư mục `db` vừa tạo ở trên.
+3. **Khởi chạy lệnh:** Bạn mở Terminal, di chuyển vào thư mục chứa file script và gõ câu lệnh sau để bắt đầu tiến trình xử lý:
+
 ```bash
 python build_emu_raw.py
 ```
