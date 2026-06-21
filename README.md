@@ -30,10 +30,13 @@ Pipeline vận hành tuần tự qua 4 bước cốt lõi:
 EMU yêu cầu một bộ cơ sở dữ liệu (Database) tham chiếu có cấu trúc khắt khe bao gồm file trình tự FASTA và file phả hệ Taxonomy tương ứng. Quy trình dưới đây giúp xây dựng một Database tối tân nhất (Cập nhật phiên bản mới nhất năm 2026).
 
 ### Nguyên liệu thô (Tải thủ công từ NCBI)
-1. **File trình tự Gen (sequence.fasta — 41.9 MB)**
+1. **File trình tự 16S RefSeq Nucleotide (sequence.fasta — 41.9 MB)**
 - Mục đích: Chứa bản đồ ADN thô (chuỗi A, T, G, C) của toàn bộ 26.870 chủng vi khuẩn trên thế giới để làm dữ liệu đối chiếu.
-- Các bước tải: * Bước 1: Truy cập vào trang quản lý của NCBI qua đường link: https://www.ncbi.nlm.nih.gov/refseq/targetedloci/16S_process/Bước 2: Click chuột vào dòng chữ "16S RefSeq Nucleotide sequence records".Bước 3: Tại trang danh sách hiện ra, bạn nhìn sang góc trên cùng bên phải, click vào nút Send to $\rightarrow$ chọn ô File $\rightarrow$ tại mục Format chọn FASTA $\rightarrow$ bấm nút Create File để tải về một file duy nhất.
-2. **File Đại danh bạ (RefSeq-release235.catalog.gz — 3.3 GB)**
+- Các bước tải: 
++ Bước 1: Truy cập vào trang quản lý của NCBI qua đường link: https://www.ncbi.nlm.nih.gov/refseq/targetedloci/16S_process/
++ Bước 2: Click chuột vào dòng chữ "16S RefSeq Nucleotide sequence records".
++ Bước 3: Tại trang danh sách hiện ra, bạn nhìn sang góc trên cùng bên phải, click vào nút Send to $\rightarrow$ chọn ô File $\rightarrow$ tại mục Format chọn FASTA $\rightarrow$ bấm nút Create File để tải về một file duy nhất.
+2. **File Danh bạ Accession Number (RefSeq-release235.catalog.gz — 3.3 GB)**
 - Mục đích: Đóng vai trò như một cuốn "từ điển" ngoại tuyến, giúp phần mềm tự động dịch từ mã quản lý khoa học của NCBI (ví dụ: NR_113675.1) sang mã số định danh loài (TaxID) để tra cứu phả hệ.
 - Các bước tải:
 + Bước 1: Truy cập vào kho máy chủ FTP của NCBI qua đường link: https://ftp.ncbi.nlm.nih.gov/refseq/release/release-catalog/
